@@ -3,12 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <title>佐々木 優実のプロフィール</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    #content {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>佐々木 優実</h1>
-  <p>不動産・インテリア業界からIT業界を目指して勉強中。</p>
-  <p>趣味は音楽鑑賞と演奏（ドラム・ギター）。</p>
-  <p>連絡先：sasaki@example.com</p>
+  <script>
+    var password = prompt("パスワードを入力してください：");
+    if (password === "20000411") {
+      document.getElementById("content").style.display = "block";
+    } else {
+      alert("パスワードが違います。");
+    }
+  </script>
+
+  <div id="content">
+    <h1>佐々木 優実について</h1>
+    <p>不動産・インテリア業界からIT業界を目指して勉強中。</p>
+    <p>趣味は音楽鑑賞・演奏（ドラム・ギター）。</p>
+    <p>連絡先：example.com</p>
+  </div>
 </body>
 </html>
