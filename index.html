@@ -10,46 +10,59 @@
       text-align: center;
       padding: 50px;
     }
+
     #content {
       display: none;
     }
+
+    .compare {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .image-box {
+      position: relative;
+      width: 45%;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 4px;
+    }
   </style>
-
-<style>
-.compare {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
-.image-box {
-  position: relative;
-  width: 45%;
-}
-
-.image-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.label {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 5px 10px;
-  font-size: 16px;
-  border-radius: 4px;
-}
-</style>
 </head>
 <body>
+
+<script>
+  window.onload = function () {
+    var password = prompt("パスワードを入力してください：");
+    if (password === "20000411") {
+      document.getElementById("content").style.display = "block";
+    } else {
+      alert("パスワードが違います。");
+    }
+  };
+</script>
+
+<div id="content">
 
    <h1>はじめに</h1>
     <p>ページをご覧いただきありがとうございます。</p>
